@@ -1,0 +1,163 @@
+$font-p : "Poppins", sans-serif;
+$font-title : "Crimson Text", serif;
+
+
+body{
+    background-color: beige;
+}
+#frame-a4{
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0.5cm;
+    display: flex ;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+
+    &:hover{
+        color: mediumblue;
+
+    }
+}
+main{
+    padding-right: 10px;
+
+    .item{
+        margin-bottom: 20px;
+    }
+
+    h2{
+        margin-top: 0;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-family: $font-title ;
+        font-size: 1.25rem;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            background-color: black;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    p{
+        text-align: justify;
+        text-indent: 0.5cm;
+        line-height: 1.1rem;
+        margin : 0;
+        font-family: $font-p;
+        font-size: 0.85rem;
+    }
+    ul.conteneur-experiences{
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        font-family: $font-p;
+        font-size: 0.85rem;
+        line-height: 1.1rem;
+
+        li{
+            list-style-type: none;
+            margin-left: 0;
+            width: 100%;
+
+            a{
+                filter:brightness(120%);
+                font-weight: bold;
+            }
+
+            img{
+                margin-right: 3px;
+            }
+            .lieu-poste{
+                margin-left: 40px;
+                line-height: 1.5rem;
+            }
+            .partie-haute{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 5px;
+
+                .poste{
+                    .poste-content{
+                        display: flex;
+                        align-items: flex-end;
+                        font-weight: bold;
+                    }
+                }
+                .date{
+                    color: grey;
+                }
+            }
+            .description{
+                li{
+                    list-style-type: none;
+                    margin-bottom: 5px;
+                    position: relative;
+                    padding-left: 15px;
+                    font-size: 0.75rem;
+
+                    &:before{
+                        position: absolute;
+                        left: 0;
+                        content: "▹";
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+
+    ul.conteneur-diplome{
+        margin:0;
+        padding: 0;
+
+        li.flex-diplome{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+
+            .img-box{
+                margin: 0 7.5px;
+                width: 30px;
+                display: flex;
+                justify-content:center;
+
+            }
+            .box-texte{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    
+}
+
+aside{
+    padding: 5px;
+    background-color: aqua;
+    min-width: 150px;
+
+    #id-container{
+        margin: 0 auto;
+        width: 125px;
+        text-align: center;
+
+        img{
+            border-radius: 50%;
+            border: 2px double white;
+        }
+        h1{
+            margin-top: 0;
+        }
+        
+    }
+}
