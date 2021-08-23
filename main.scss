@@ -1,5 +1,6 @@
 $font-p : "Poppins", sans-serif;
 $font-title : "Crimson Text", serif;
+$font-id : "Oswald", serif;
 
 
 body{
@@ -26,6 +27,7 @@ a{
 }
 main{
     padding-right: 10px;
+    width: 610px;
 
     .item{
         margin-bottom: 20px;
@@ -170,21 +172,59 @@ main{
 
 aside{
     padding: 5px;
-    background-color: aqua;
-    min-width: 150px;
+    
+    min-width: 175px;
 
     #id-container{
         margin: 0 auto;
-        width: 125px;
+        width: 175px;
         text-align: center;
 
-        img{
-            border-radius: 50%;
-            border: 2px double white;
+        .head-id{
+            color: whitesmoke;
+            background-color: rgb(10, 107, 107);
+            padding: 5px 0px;
+            margin: 0 auto 5px;
+            img{
+                border-radius: 50%;
+                border: 2px double white;
+            }
+            h1{
+                margin-top: 0;
+                font-family: $font-p;
+                font-size: 1.45rem;
+                width: 100%;
+                font-family: $font-id;
+                letter-spacing: 1px;  
+            }
+            h2{
+                font-family: $font-p;
+                font-size: 0.85rem;
+                letter-spacing: 0.2px;
+            }
         }
-        h1{
-            margin-top: 0;
+        .bottom-id{
+            background-color: #0e9595;
+            text-align: left;
+            padding: 10px 5px;
+            height: 100%;
+            color: whitesmoke;
+
+            .info-content{
+                img{
+                  line-height: 0.1rem;
+                }
+                .info{
+                    text-indent: 15px;
+                    font-family: $font-p;
+                    font-size: 0.75rem;
+                    
+                }
+            }
+
+            
         }
+
         
     }
 }

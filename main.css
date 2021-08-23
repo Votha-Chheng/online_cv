@@ -24,6 +24,7 @@ a:hover {
 
 main {
   padding-right: 10px;
+  width: 610px;
 }
 main .item {
   margin-bottom: 20px;
@@ -150,18 +151,48 @@ main ul.conteneur-diplome li.flex-diplome .box-texte .date-diplome {
 
 aside {
   padding: 5px;
-  background-color: aqua;
-  min-width: 150px;
+  min-width: 175px;
 }
 aside #id-container {
   margin: 0 auto;
-  width: 125px;
+  width: 175px;
   text-align: center;
 }
-aside #id-container img {
+aside #id-container .head-id {
+  color: whitesmoke;
+  background-color: #0a6b6b;
+  padding: 5px 0px;
+  margin: 0 auto 5px;
+}
+aside #id-container .head-id img {
   border-radius: 50%;
   border: 2px double white;
 }
-aside #id-container h1 {
+aside #id-container .head-id h1 {
   margin-top: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.45rem;
+  width: 100%;
+  font-family: "Oswald", serif;
+  letter-spacing: 1px;
+}
+aside #id-container .head-id h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2px;
+}
+aside #id-container .bottom-id {
+  background-color: #0e9595;
+  text-align: left;
+  padding: 10px 5px;
+  height: 100%;
+  color: whitesmoke;
+}
+aside #id-container .bottom-id .info-content img {
+  line-height: 0.1rem;
+}
+aside #id-container .bottom-id .info-content .info {
+  text-indent: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=main.css.map */
