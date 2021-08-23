@@ -16,6 +16,8 @@ body{
 a{
     color: inherit;
     text-decoration: none;
+    filter:brightness(120%);
+    font-weight: bold;
 
     &:hover{
         color: mediumblue;
@@ -66,6 +68,7 @@ main{
             list-style-type: none;
             margin-left: 0;
             width: 100%;
+            margin-bottom: 12px;
 
             a{
                 filter:brightness(120%);
@@ -73,17 +76,18 @@ main{
             }
 
             img{
-                margin-right: 3px;
+                margin-right: 5px;
+                padding-right: 5px;
             }
             .lieu-poste{
                 margin-left: 40px;
-                line-height: 1.5rem;
+                line-height: 1.25rem;
+                font-style: italic;
             }
             .partie-haute{
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-                margin-bottom: 5px;
 
                 .poste{
                     .poste-content{
@@ -97,18 +101,31 @@ main{
                 }
             }
             .description{
+                ul{
+                    padding-left: 10px;
+                }
                 li{
                     list-style-type: none;
                     margin-bottom: 5px;
                     position: relative;
                     padding-left: 15px;
                     font-size: 0.75rem;
+                    width: 600px;
 
                     &:before{
                         position: absolute;
                         left: 0;
                         content: "▹";
                         z-index: 2;
+                    }
+                    .front-back{
+                        font-weight: bold;
+                    }
+                    .tag{
+                        border: 2px solid grey;
+                        padding : 0 3px;
+                        border-radius: 3px;
+                        line-height: 1.5rem;
                     }
                 }
             }
@@ -117,7 +134,7 @@ main{
 
     ul.conteneur-diplome{
         margin:0;
-        padding: 0;
+        padding: 0;  
 
         li.flex-diplome{
             display: flex;
@@ -135,6 +152,16 @@ main{
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                font-family: $font-p;
+                font-size: 0.8rem;
+
+                .nom-diplome{
+                    font-weight: bold;
+                }
+
+                .date-diplome{
+                    color: grey;
+                }
             }
         }
     }

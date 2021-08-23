@@ -15,6 +15,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  filter: brightness(120%);
+  font-weight: bold;
 }
 a:hover {
   color: mediumblue;
@@ -63,23 +65,25 @@ main ul.conteneur-experiences li {
   list-style-type: none;
   margin-left: 0;
   width: 100%;
+  margin-bottom: 12px;
 }
 main ul.conteneur-experiences li a {
   filter: brightness(120%);
   font-weight: bold;
 }
 main ul.conteneur-experiences li img {
-  margin-right: 3px;
+  margin-right: 5px;
+  padding-right: 5px;
 }
 main ul.conteneur-experiences li .lieu-poste {
   margin-left: 40px;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
+  font-style: italic;
 }
 main ul.conteneur-experiences li .partie-haute {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 5px;
 }
 main ul.conteneur-experiences li .partie-haute .poste .poste-content {
   display: flex;
@@ -89,18 +93,31 @@ main ul.conteneur-experiences li .partie-haute .poste .poste-content {
 main ul.conteneur-experiences li .partie-haute .date {
   color: grey;
 }
+main ul.conteneur-experiences li .description ul {
+  padding-left: 10px;
+}
 main ul.conteneur-experiences li .description li {
   list-style-type: none;
   margin-bottom: 5px;
   position: relative;
   padding-left: 15px;
   font-size: 0.75rem;
+  width: 600px;
 }
 main ul.conteneur-experiences li .description li:before {
   position: absolute;
   left: 0;
   content: "▹";
   z-index: 2;
+}
+main ul.conteneur-experiences li .description li .front-back {
+  font-weight: bold;
+}
+main ul.conteneur-experiences li .description li .tag {
+  border: 2px solid grey;
+  padding: 0 3px;
+  border-radius: 3px;
+  line-height: 1.5rem;
 }
 main ul.conteneur-diplome {
   margin: 0;
@@ -121,6 +138,14 @@ main ul.conteneur-diplome li.flex-diplome .box-texte {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+}
+main ul.conteneur-diplome li.flex-diplome .box-texte .nom-diplome {
+  font-weight: bold;
+}
+main ul.conteneur-diplome li.flex-diplome .box-texte .date-diplome {
+  color: grey;
 }
 
 aside {
