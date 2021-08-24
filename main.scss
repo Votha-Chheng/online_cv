@@ -2,16 +2,22 @@ $font-p : "Poppins", sans-serif;
 $font-title : "Crimson Text", serif;
 $font-id : "Oswald", serif;
 
+*{
+    margin: 0;
+    padding: 0;
+    //box-sizing: border-box;
+}
 
 body{
-    background-color: beige;
+    background-color: rgb(250, 250, 250);
+    //background-color: black;
 }
 #frame-a4{
     width: 21cm;
     height: 29.7cm;
     margin: 0 auto;
     background-color: white;
-    padding: 0.5cm;
+    padding: 0.35cm 0.5cm;
     display: flex ;
 }
 a{
@@ -57,6 +63,7 @@ main{
         margin : 0;
         font-family: $font-p;
         font-size: 0.85rem;
+        letter-spacing: 0.5px;
     }
     ul.conteneur-experiences{
         margin: 0 auto;
@@ -65,11 +72,11 @@ main{
         font-family: $font-p;
         font-size: 0.85rem;
         line-height: 1.1rem;
-
+        
+        
         li{
             list-style-type: none;
             margin-left: 0;
-            width: 100%;
             margin-bottom: 12px;
 
             a{
@@ -112,7 +119,8 @@ main{
                     position: relative;
                     padding-left: 15px;
                     font-size: 0.75rem;
-                    width: 600px;
+                    width: 590px;
+                    line-height: 1rem;
 
                     &:before{
                         position: absolute;
@@ -171,9 +179,8 @@ main{
 }
 
 aside{
-    padding: 0px;
+    padding: 0px 0px 10px;
     background-color: #382541;
-    //background-color:  rgba(10, 107, 107, 0.2);
     min-width: 175px;
 
     #id-container{
@@ -211,12 +218,10 @@ aside{
                 font-family: $font-p;
                 font-weight: 100;
                 font-size: 0.8rem;
-                
+                margin: 5px 0px;
             }
         }
         .bottom-id{
-            //background-color:  rgba(10, 107, 107, 0.7);
-            //background-color: rgb(30, 139, 139);
             background-color: #7b7283;
             text-align: left;
             padding: 10px 5px;
@@ -224,28 +229,54 @@ aside{
             color: whitesmoke;
             border-bottom: 5px solid whitesmoke;
 
+            .info-content.last{
+                margin-bottom: 0;
+                a{
+                    height : 25px
+                }
+            }
             .info-content{
                 display: flex;
-                margin: 0px 0px 15px;
+                margin: 0px 0px 10px;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
 
+                div{
+                    height:25px;
+                }
+
+                div.tel{
+                    height: 20px;
+                }
+                
+                div.mail{
+                    height: 16px;
+                }
+
                 a{
                     font-weight: normal;
+                    transition: color 0.2s ease-out;
                 }
-                img{
+
+                img:not(.qrcode){
                   line-height: 0.1rem;
                   
                   &:hover{
-                      transform: scale(1.1);
+                      transform: scale(1.2);
                       transition: transform 0.2s ease-out;
                   }
                 }
-                .info{
+                img.qrcode{
+                    margin-top: -5px;
+                }
+
+                span.info{
                     font-family: $font-p;
                     font-size: 0.75rem;
-                    margin: 20px 0;
+                }
+                span.portfolio{
+                    margin: -5px 0 5px 0;
                 }
             }    
         }
@@ -257,14 +288,103 @@ aside{
 
             h3{
                 font-family: $font-id;
-                letter-spacing: 1.2px;
-                margin: 5px 0;
+                font-size: 1.25rem;
+                letter-spacing: 0.2px;
+                margin: 2.5px 0 3.5px;
+                font-weight: 400;
             }
             div{
                 font-family: $font-p;
                 font-size: 0.8rem;
             }
-            
+            .langages{
+                margin-bottom: 5px;
+
+                span.techno{
+                    border: 1px solid white;
+                    line-height: 1.5rem;
+                    padding: 1.5px;
+                    border-radius: 3px;
+                }
+            }
+            .logiciels{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin-bottom: 5px;
+
+                div{
+                    padding: 1px 1.75px;
+                    background-color: whitesmoke;
+                    color: #32213a;
+                    position: relative;
+                    margin: 0 7.5px 5px;
+                    font-weight: bold;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        clip-path: polygon(0 50%, 100% 100%, 100% 0);
+                        background-color: whitesmoke;
+                        top: 0;
+                        left:-9.5px;
+                        width: 10px;
+                        height: 100%;
+                    }
+                    &::after{
+                        content: "";
+                        width: 5px;
+                        height: 5px;
+                        background-color: #32213a;
+                        position: absolute;
+                        top: 50%;
+                        left: -5px;
+                        transform: translateY(-50%);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .langues{
+                margin-bottom: 5px;
+
+                .langue-content{
+                    display: flex;
+                    width: 100%;
+                    .langue{
+                        overflow: hidden;
+                        width: 100px;
+                    }
+                    .level{
+                        background-color: whitesmoke;
+                        width: 150px;
+                        height: 12.5px;
+                        border-radius: 2.5px;
+
+                        div{
+                            border-radius: 2.5px 0px 0px 2.5px;
+                            background-color: #74b3ce;
+                            height: 100%;
+                        }
+
+                        .excellent{
+                            width: 95%;   
+                        }
+
+                        .mid{
+                            width: 70%;
+                        }
+                        .low{
+                            width:40%;
+                        }
+                    }
+                    .level.good{
+                        background-color: #74b3ce;
+                    }
+                }
+            }
+            .hobbies{
+                padding-bottom: 7.5px;
+            }
         }
         
     }

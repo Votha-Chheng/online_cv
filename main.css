@@ -1,6 +1,11 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: beige;
+  background-color: #fafafa;
 }
 
 #frame-a4 {
@@ -8,7 +13,7 @@ body {
   height: 29.7cm;
   margin: 0 auto;
   background-color: white;
-  padding: 0.5cm;
+  padding: 0.35cm 0.5cm;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +66,7 @@ main p {
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 0.85rem;
+  letter-spacing: 0.5px;
 }
 
 main ul.conteneur-experiences {
@@ -75,7 +81,6 @@ main ul.conteneur-experiences {
 main ul.conteneur-experiences li {
   list-style-type: none;
   margin-left: 0;
-  width: 100%;
   margin-bottom: 12px;
 }
 
@@ -132,7 +137,8 @@ main ul.conteneur-experiences li .description li {
   position: relative;
   padding-left: 15px;
   font-size: 0.75rem;
-  width: 600px;
+  width: 590px;
+  line-height: 1rem;
 }
 
 main ul.conteneur-experiences li .description li:before {
@@ -200,7 +206,7 @@ main ul.conteneur-diplome li.flex-diplome .box-texte .date-diplome {
 }
 
 aside {
-  padding: 0px;
+  padding: 0px 0px 10px;
   background-color: #382541;
   min-width: 175px;
 }
@@ -243,6 +249,7 @@ aside #id-container .head-id h4.ville {
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-size: 0.8rem;
+  margin: 5px 0px;
 }
 
 aside #id-container .bottom-id {
@@ -254,11 +261,19 @@ aside #id-container .bottom-id {
   border-bottom: 5px solid whitesmoke;
 }
 
+aside #id-container .bottom-id .info-content.last {
+  margin-bottom: 0;
+}
+
+aside #id-container .bottom-id .info-content.last a {
+  height: 25px;
+}
+
 aside #id-container .bottom-id .info-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0px 0px 15px;
+  margin: 0px 0px 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -269,27 +284,48 @@ aside #id-container .bottom-id .info-content {
   text-align: center;
 }
 
-aside #id-container .bottom-id .info-content a {
-  font-weight: normal;
+aside #id-container .bottom-id .info-content div {
+  height: 25px;
 }
 
-aside #id-container .bottom-id .info-content img {
+aside #id-container .bottom-id .info-content div.tel {
+  height: 20px;
+}
+
+aside #id-container .bottom-id .info-content div.mail {
+  height: 16px;
+}
+
+aside #id-container .bottom-id .info-content a {
+  font-weight: normal;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+aside #id-container .bottom-id .info-content img:not(.qrcode) {
   line-height: 0.1rem;
 }
 
-aside #id-container .bottom-id .info-content img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+aside #id-container .bottom-id .info-content img:not(.qrcode):hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 
-aside #id-container .bottom-id .info-content .info {
+aside #id-container .bottom-id .info-content img.qrcode {
+  margin-top: -5px;
+}
+
+aside #id-container .bottom-id .info-content span.info {
   font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
-  margin: 20px 0;
+}
+
+aside #id-container .bottom-id .info-content span.portfolio {
+  margin: -5px 0 5px 0;
 }
 
 aside #id-container .id-soft-skills {
@@ -301,12 +337,120 @@ aside #id-container .id-soft-skills {
 
 aside #id-container .id-soft-skills h3 {
   font-family: "Oswald", serif;
-  letter-spacing: 1.2px;
-  margin: 5px 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+  margin: 2.5px 0 3.5px;
+  font-weight: 400;
 }
 
 aside #id-container .id-soft-skills div {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
+}
+
+aside #id-container .id-soft-skills .langages {
+  margin-bottom: 5px;
+}
+
+aside #id-container .id-soft-skills .langages span.techno {
+  border: 1px solid white;
+  line-height: 1.5rem;
+  padding: 1.5px;
+  border-radius: 3px;
+}
+
+aside #id-container .id-soft-skills .logiciels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+
+aside #id-container .id-soft-skills .logiciels div {
+  padding: 1px 1.75px;
+  background-color: whitesmoke;
+  color: #32213a;
+  position: relative;
+  margin: 0 7.5px 5px;
+  font-weight: bold;
+}
+
+aside #id-container .id-soft-skills .logiciels div::before {
+  content: "";
+  position: absolute;
+  -webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0);
+          clip-path: polygon(0 50%, 100% 100%, 100% 0);
+  background-color: whitesmoke;
+  top: 0;
+  left: -9.5px;
+  width: 10px;
+  height: 100%;
+}
+
+aside #id-container .id-soft-skills .logiciels div::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #32213a;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+aside #id-container .id-soft-skills .langues {
+  margin-bottom: 5px;
+}
+
+aside #id-container .id-soft-skills .langues .langue-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+aside #id-container .id-soft-skills .langues .langue-content .langue {
+  overflow: hidden;
+  width: 100px;
+}
+
+aside #id-container .id-soft-skills .langues .langue-content .level {
+  background-color: whitesmoke;
+  width: 150px;
+  height: 12.5px;
+  border-radius: 2.5px;
+}
+
+aside #id-container .id-soft-skills .langues .langue-content .level div {
+  border-radius: 2.5px 0px 0px 2.5px;
+  background-color: #74b3ce;
+  height: 100%;
+}
+
+aside #id-container .id-soft-skills .langues .langue-content .level .excellent {
+  width: 95%;
+}
+
+aside #id-container .id-soft-skills .langues .langue-content .level .mid {
+  width: 70%;
+}
+
+aside #id-container .id-soft-skills .langues .langue-content .level .low {
+  width: 40%;
+}
+
+aside #id-container .id-soft-skills .langues .langue-content .level.good {
+  background-color: #74b3ce;
+}
+
+aside #id-container .id-soft-skills .hobbies {
+  padding-bottom: 7.5px;
 }
 /*# sourceMappingURL=main.css.map */
